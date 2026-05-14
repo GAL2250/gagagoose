@@ -1,1 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>我的作品集</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      background: #f5f5f2;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      padding: 48px 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: linear-gradient(135deg, #111, #444);
+      color: white;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 16px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: #222;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .logo {
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 96px);
+      margin: 0;
+      line-height: 1;
+    }
+
+    .subtitle {
+      margin-top: 24px;
+      max-width: 680px;
+      font-size: 22px;
+      color: #ddd;
+    }
+
+    section {
+      padding: 96px 8%;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 32px;
+    }
+
+    .about {
+      max-width: 760px;
+      font-size: 18px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .project-image {
+      height: 220px;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .project-content {
+      padding: 24px;
+    }
+
+    .project-content h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eee;
+      font-size: 13px;
+    }
+
+    .contact {
+      background: #111;
+      color: white;
+    }
+
+    .contact a {
+      color: white;
+    }
+
+    footer {
+      padding: 32px 8%;
+      background: #000;
+      color: #aaa;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        padding: 12px 6%;
+      }
+
+      nav a {
+        margin-left: 12px;
+        font-size: 13px;
+      }
+
+      header,
+      section {
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">My Portfolio</div>
+    <div>
+      <a href="#about">关于我</a>
+      <a href="#projects">作品</a>
+      <a href="#contact">联系</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>你好，我是你的名字</h1>
+    <p class="subtitle">
+      我是一名数字媒体设计方向的创作者，关注互动设计、视觉叙事、影像实验与新媒体艺术。
+    </p>
+  </header>
+
+  <section id="about">
+    <h2>关于我</h2>
+    <p class="about">
+      这里写你的个人介绍。比如你的研究方向、设计兴趣、擅长的软件、项目经验、创作理念等。
+      你可以写：我关注人与技术之间的关系，尝试通过影像、交互装置、网页和生成式视觉探索新的表达方式。
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>精选作品</h2>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="project-image">作品图片 1</div>
+        <div class="project-content">
+          <h3>作品名称 1</h3>
+          <p>
+            这里写作品介绍。比如项目背景、使用媒介、你的创作方法，以及最终呈现效果。
+          </p>
+          <span class="tag">Interactive Design</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">作品图片 2</div>
+        <div class="project-content">
+          <h3>作品名称 2</h3>
+          <p>
+            这里写第二个作品介绍。可以是影像、装置、网页、视觉系统、实验项目等。
+          </p>
+          <span class="tag">Visual Design</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">作品图片 3</div>
+        <div class="project-content">
+          <h3>作品名称 3</h3>
+          <p>
+            这里写第三个作品介绍。建议每个作品都写清楚：主题、工具、过程、结果。
+          </p>
+          <span class="tag">Media Art</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>联系我</h2>
+    <p>Email：yourname@email.com</p>
+    <p>Instagram / Behance / GitHub：填写你的链接</p>
+  </section>
+
+  <footer>
+    © 2026 Your Name. All rights reserved.
+  </footer>
+</body>
+</html>
